@@ -1,10 +1,5 @@
-FROM ubuntu
-
-RUN set -eux; \
-    apt-get update; \
-    apt-get install -y --no-install-recommends \
-        rsync \
-    ; \
-    rm -rf /var/lib/apt/lists/*
-
-CMD ["rsync", "--help"]
+FROM alpine:latest
+RUN apk --no-cache add \
+    rsync \
+    sqlite3
+CMD ["rsync"]
