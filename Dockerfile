@@ -1,5 +1,5 @@
-FROM alpine:latest
-RUN apk --no-cache add \
+FROM ubuntu:latest
+RUN apt install \
     rsync \
-    sqlite
+    sqlite3
 CMD ["rsync"]
