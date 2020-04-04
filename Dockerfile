@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN apt update && apt upgrade;
-RUN apt install \
+RUN apt install -y \
     util-linux \
     rsync \
     duplicity \
